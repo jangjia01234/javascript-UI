@@ -8,23 +8,23 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-    <div class="alert-box" id="alert">알림창 첫번째
-        <div class="close-btn"
-            onclick="document.getElementById('alert').style.display = 'none';">
-            X</div>
+    <div class="alert-box" id="alert-top">알림창 첫번째
+        <button class="close-btn"
+            onclick="document.getElementById('alert-top').style.display = 'none';">
+            X</button>
     </div>
-    <div class="alert-box" id="alert">알림창 두번째
-        <div class="close-btn"
-            onclick="document.getElementById('alert').style.display = 'none';">
-            X</div>
+    <div class="alert-box" id="alert-middle">알림창 두번째
+        <button class="close-btn"
+            onclick="document.getElementById('alert-middle').style.display = 'none';">
+            X</button>
     </div>
-    <div class="alert-box" id="alert">알림창 세번째
-        <div class="close-btn"
-            onclick="document.getElementById('alert').style.display = 'none';">
-            X</div>
+    <div class="alert-box" id="alert-bottom">알림창 세번째
+        <button class="close-btn"
+            onclick="document.getElementById('alert-bottom').style.display = 'none';">
+            X</button>
     </div>
     <button class="open-btn" onclick=
-    "document.getElementById('alert').style.display = 'none';">
+    "document.getElementById('alert-top').style.display = 'block';">
     열기</button>
 </body>
 </html>

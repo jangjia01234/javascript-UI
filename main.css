@@ -4,28 +4,17 @@
     color: rgb(155, 139, 119);
     border-radius: 5px;
     margin-bottom: 10px;
-    /* display: flex;
-    justify-content: space-between; */
     display: block;
 }
 
-#alert:first-child {
-    display: flex;
-    justify-content: space-between;
-}
-
-#alert:nth-child(2) {
+#alert-middle {
     background-color: powderblue;
     color: rgb(110, 135, 138);
-    display: flex;
-    justify-content: space-between;
 }
 
-#alert:nth-child(3) {
+#alert-bottom {
     background-color: pink;
-    color: rgb(149, 112, 118);
-    display: flex;
-    justify-content: space-between;
+    color: rgb(149, 112, 118);   
 }
 
 .open-btn {
@@ -38,5 +27,9 @@
 }
 
 .close-btn {
+    background-color: transparent;
+    border: none;
+    color: gray;
     font-weight: 600;
+    margin-left: 70vw;
 }
