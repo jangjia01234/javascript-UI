@@ -1,0 +1,42 @@
+.alert-box {
+    background-color: bisque;
+    padding: 20px;
+    color: rgb(155, 139, 119);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    /* display: flex;
+    justify-content: space-between; */
+    display: block;
+}
+
+#alert:first-child {
+    display: flex;
+    justify-content: space-between;
+}
+
+#alert:nth-child(2) {
+    background-color: powderblue;
+    color: rgb(110, 135, 138);
+    display: flex;
+    justify-content: space-between;
+}
+
+#alert:nth-child(3) {
+    background-color: pink;
+    color: rgb(149, 112, 118);
+    display: flex;
+    justify-content: space-between;
+}
+
+.open-btn {
+    background-color: transparent;
+    border: none;
+    background-color: tomato;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+}
+
+.close-btn {
+    font-weight: 600;
+}
