@@ -8,20 +8,25 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-    <div class="alert-box" id="alert">알림창 첫번째
-        <button class="close-btn" onclick="handleAlert('none');">X</button>
+    <div class="alert-box" id="alert">
+        <p id="alert-id" onclick="handleAlertText('비밀번호를 입력하세요');">
+            아이디를 입력하세요</p>
+        <button onclick="handleAlert('none')">닫기</button>
     </div>
-    <div class="alert-box" id="alert-middle">알림창 두번째
-        <button class="close-btn" onclick="handleAlert('none');">X</button>
-    </div>
-    <div class="alert-box" id="alert-bottom">알림창 세번째
-        <button class="close-btn" onclick="handleAlert('none');">X</button>
-    </div>
-    <button class="open-btn" onclick="handleAlert('block');">열기</button>
-    
+    <!-- <div class="alert-box" id="alert-pw">
+        <p>비밀번호를 입력하세요</p>
+        <button onclick="handleAlert('none')">닫기</button>
+    </div> -->
+
+    <button onclick="handleAlert('block');">버튼1</button>
+    <button onclick="handleAlert('block');">버튼2</button>
+
     <script>
         function handleAlert(event) {
             document.getElementById('alert').style.display = event;
+        }
+        function handleAlertText(event) {
+            document.getElementById('alert-id').innerHTML = event;
         }
     </script>
 </body>
