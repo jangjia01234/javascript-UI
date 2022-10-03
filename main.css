@@ -4,7 +4,7 @@
     color: rgb(155, 139, 119);
     border-radius: 5px;
     margin-bottom: 10px;
-    display: block;
+    display: none;
 }
 
 #alert-middle {
