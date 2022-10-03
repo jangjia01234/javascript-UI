@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="alert-box" id="alert">
-        <p id="alert-id" onclick="handleAlertText('비밀번호를 입력하세요');">
+        <p id="alert-id">
             아이디를 입력하세요</p>
         <button onclick="handleAlert('none')">닫기</button>
     </div>
@@ -19,15 +19,13 @@
     </div>
 -->
 
-    <button onclick="handleAlert('block');">버튼1</button>
-    <button onclick="handleAlert('block');">버튼2</button>
+    <button onclick="handleAlert('block','아이디를 입력하세요');">버튼1</button>
+    <button onclick="handleAlert('block','비밀번호를 입력하세요');">버튼2</button>
 
     <script>
-        function handleAlert(event) {
-            document.getElementById('alert').style.display = event;
-        }
-        function handleAlertText(event) {
-            document.getElementById('alert-id').innerHTML = event;
+        function handleAlert(event1, event2) {
+            document.getElementById('alert').style.display = event1;
+            document.getElementById('alert-id').innerHTML = event2;
         }
     </script>
 </body>
