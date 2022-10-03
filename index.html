@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="alert-box" id="alert">
-        <p id="alert-id"></p>
+        <p id="alert-text"></p>
         <button onclick="handleAlert('none')">닫기</button>
     </div>
     <button onclick="handleAlert('block','아이디를 입력하세요');">버튼1</button>
@@ -18,7 +18,7 @@
     <script>
         function handleAlert(event1, event2) {
             document.getElementById('alert').style.display = event1;
-            document.getElementById('alert-id').innerHTML = event2;
+            document.getElementById('alert-text').innerHTML = event2;
         }
     </script>
 </body>
