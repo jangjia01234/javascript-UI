@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>javascript practice</title>
-    <link rel="stylesheet" href="./main.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
       </nav> 
 
     <!-- submenu --> 
-    <ul class="list-group" style="display: none;">
+    <ul class="list-group">
         <li class="list-group-item">An item</li>
         <li class="list-group-item">A second item</li>
         <li class="list-group-item">A third item</li>
@@ -32,9 +32,9 @@
 
     <!-- javascript -->
     <script>
-        document.getElementsByClassName('button-left')[0].addEventListener('click', function(){
-        document.getElementsByClassName('navbar-toggler')[0].addEventListener('click', function(){
-            document.getElementsByClassName('list-group')[0].style.display = 'block';
+        document.querySelectorAll('.navbar-toggler')[0].addEventListener('click', 
+            function(){
+                document.querySelectorAll('.list-group')[0].classList.toggle('show');
         });        
     </script>
 
