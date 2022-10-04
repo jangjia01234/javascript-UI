@@ -4,22 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>javascript practice</title>
     <link rel="stylesheet" href="./main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <div class="alert-box" id="alert">
-        <p id="alert-text"></p>
-        <button onclick="handleAlert('none')">닫기</button>
-    </div>
-    <button onclick="handleAlert('block','아이디를 입력하세요');">버튼1</button>
-    <button onclick="handleAlert('block','비밀번호를 입력하세요');">버튼2</button>
 
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <span class="navbar-brand">Navbar</span>
+          <button class="navbar-toggler" type="button">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav> 
+
+    <!-- submenu --> 
+
+    <ul class="list-group">
+        <li class="list-group-item">An item</li>
+        <li class="list-group-item">A second item</li>
+        <li class="list-group-item">A third item</li>
+        <li class="list-group-item">A fourth item</li>
+        <li class="list-group-item">And a fifth one</li>
+    </ul> 
+
+    <!-- alert-box -->
+    <!-- <div class="alert-box">
+        <p class="alert-text"></p>
+        <button class="close">닫기</button>
+    </div>
+    <button class="button-left">버튼1</button>
+    <button class="button-right">버튼2</button> -->
+
+    <!-- javascript -->
     <script>
-        function handleAlert(event1, event2) {
-            document.getElementById('alert').style.display = event1;
-            document.getElementById('alert-text').innerHTML = event2;
-        }
+        document.getElementsByClassName('button-left')[0].addEventListener('click', function(){
+            document.getElementsByClassName('alert-box')[0].style.display = 'block';
+            document.getElementsByClassName('alert-text')[0].innerHTML = '아이디를 입력하세요';
+        });
+
+        document.getElementsByClassName('button-right')[0].addEventListener('click', function(){
+            document.getElementsByClassName('alert-box')[0].style.display = 'block';
+            document.getElementsByClassName('alert-text')[0].innerHTML = '비밀번호를 입력하세요';
+        });
+
+        document.getElementsByClassName('close')[0].addEventListener('click', function(){
+            document.getElementsByClassName('alert-box')[0].style.display = 'none';
+        });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js">
+    </script>
+    
 </body>
+
 </html>
