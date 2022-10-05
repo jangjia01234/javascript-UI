@@ -1,5 +1,7 @@
 .list-group {
-    display: none;
+    visibility : hidden;
+    height: 0;
+    transition: all 1s;
 }
 
 .black-bg {
@@ -10,19 +12,25 @@
     z-index : 5;
     padding: 30px;
     visibility : hidden;
-    opacity : 0;
-    transition : all 1s;
+    opacity: 0;
+    transition : all 0.5s;
   }
 
 .white-bg {
     background: white;
     border-radius: 5px;
     padding: 30px;
+    height: 0%;
+    transition : all 0.5s;
 } 
 
 .show {
     visibility : visible;
     opacity : 1;
+}
+
+.show .white-bg {
+    height: 20%;
 }
 
 
