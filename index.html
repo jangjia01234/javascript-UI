@@ -88,8 +88,15 @@
         $('.btn-danger').on('click', function(){
                 $('.black-bg').css('display', 'none');
         })
-        // 전송 버튼을 눌렀을 때,
-        // <input>에 입력된 값이 공백이면 알림을 띄워주세요
+
+        $('.btn-primary').on('click', function(){
+                let inputValue = $('.form-control').value;
+                if (inputValue == null) {
+                    alert('There is no data.');
+                };
+        });
+ 
+
     </script>
     
     <!-- bootstrap -->
