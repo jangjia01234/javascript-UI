@@ -1,3 +1,7 @@
+.navbar-toggler {
+    border: none;
+}
+
 .list-group {
     visibility : hidden;
     height: 0;
@@ -24,13 +28,55 @@
     transition : all 0.5s;
 } 
 
+.btn-primary {
+    background-color: black;
+    border: none;
+}
+
+.btn-danger {
+    background-color: gray;
+    border: none;
+}
+
 .show {
     visibility : visible;
     opacity : 1;
 }
 
 .show .white-bg {
-    height: 20%;
+    height: 40%;
+}
+
+.welcome-text {
+    padding: 80px 50px;
+    text-align: center;
+}
+
+.login-btn {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 5px 10px;
+    background: transparent;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+main {
+    padding: 100px 20px;
+}
+
+main h4:first-child {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+    gap: 30px;
+}
+
+main h4:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 
