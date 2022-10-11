@@ -90,7 +90,7 @@
         })
         $('.btn-primary').on('click', function(){
                 let inputValue = $('.form-control').value;
-                if (inputValue == '') {
+                if (inputValue == null) {
                     alert('There is no data.');
                 };
         });
