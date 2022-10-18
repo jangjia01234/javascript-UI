@@ -64,8 +64,9 @@
             <img src="#">
         </h2>
     </main>
-    
 
+    <input type="number" id="삼육구">
+    <button type="submit" id="버튼">Play</button>
 
     <!-- javascript -->
     <!-- <script>
@@ -102,6 +103,19 @@
                 e.preventDefault();
                 alert ('The PW has to be minimum 6 letters');
             }
+        });
+
+        // 업그레이드 369 만들기! 9의 배수에서는 박수를 두 번 쳐보자
+
+        document.getElementById('버튼').addEventListener('click', function(){
+                if (document.getElementById('삼육구').value % 9 == 0) {
+                    alert('👏👏');
+                }
+                else if (document.getElementById('삼육구').value % 3 == 0) {
+                    alert('👏');
+                } else {
+                    alert('You Lose');
+                }
         });
 
 
