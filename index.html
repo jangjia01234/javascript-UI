@@ -41,7 +41,7 @@
              </div>
              <div class="my-3">
                <span>Password</span>
-               <input type="password" class="form-control" id="login-password">
+               <input type="password" class="form-control login-password">
              </div>
              <button type="submit" class="btn btn-primary">Submit</button>
              <button type="button" class="btn btn-danger" id="close">Close</button>
@@ -88,34 +88,20 @@
         $('.btn-danger').on('click', function(){
                 $('.black-bg').css('display', 'none');
         })
-        $('.btn-primary').on('click', function(){
-                if ($('.login-email').value == ''){
-                // let inputValue = $('.form-control').value;
-                // if (inputValue == null) {
-                    alert('There is no data.');
-                };
+        $('.btn-primary').on('click', function(e){
+                if ($('.login-email').value == null) {
+                    e.preventDefault();
+                    alert('Please write ID');
+                } else if ($('.login-password').value == null) {
+                    e.preventDefault();
+                    alert('Please write PW');
+                } else if ($('.login-email').value == null && 
+                $('.login-password').value == null) {
+                    e.preventDefault();
+                    alert('Please write something');
+                }
         });
 
-        // $('form').on('submit', function(e){
-        //     if ($('email').value == ''){
-        //         e.preventDefault();
-        //         alert('아이디 입력 안하셨어요')
-        //     }
-        // });
-
-        // $('form').on('submit', function(e){
-        //     if ($(login-email.value) == null) {
-        //         e.preventDefault();
-        //         alert('아이디를 입력해주세요');
-        //     } else if (login-password.value == null) {
-        //         e.preventDefault();
-        //         alert('비번을 입력해주세요');
-        //     } else if ($(login-email.value) == null 
-        //     && $(login-password.value) == null) {
-        //         e.preventDefault();
-        //         alert('값을 입력해주세요');
-        //     }
-        // });
     </script>
     
     <!-- bootstrap -->
