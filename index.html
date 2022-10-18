@@ -88,15 +88,23 @@
         $('.btn-danger').on('click', function(){
                 $('.black-bg').css('display', 'none');
         });
+
+        // 전송 버튼 클릭시 아이디랑 패스워드 공백검사, 비번 6자 미만이면 알림 띄우기
         document.getElementsByClassName('btn-primary')[0].addEventListener('click', function(e){
-            if( document.getElementById('login-email').value == '') {
+            if ( document.getElementById('login-email').value == '') {
                 e.preventDefault();
                 alert ('Please write ID');
             } else if ( document.getElementById('login-password').value == '') {
                 e.preventDefault();
                 alert ('Please write PW');
             } 
+            if ( document.getElementById('login-password').value.length < 6 ) {
+                e.preventDefault();
+                alert ('The PW has to be minimum 6 letters');
+            }
         });
+
+
     </script>
     
     <!-- bootstrap -->
