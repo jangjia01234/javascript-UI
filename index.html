@@ -14,6 +14,7 @@
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
           <span class="navbar-brand">Pass Board</span>
+          <span class="badge bg- ms-auto">Dark 🔄</span>
           <button class="navbar-toggler" type="button">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -62,7 +63,7 @@
             <img src="#">
             <img src="#">
             <img src="#">
-        </h2>
+        </h2>   
     </main>
 
     <!-- <input type="number" id="개론" placeholder="개론">
@@ -106,20 +107,25 @@
             }
         });
 
-        // 공인중개사 시험점수 입력 시 합격인지 알려주는 함수
-        // 1차 + 2차 > 120 = 합격 /  1차 < 40 or 2차 <40 = 불합격
+        // dark / light mode button
+        // badge 클릭 횟수가 홀수면 내부 글자를 Light로 변경
+        // badge 클릭 횟수가 짝수면 내부 글자를 Dark로 변경
 
-        // document.getElementById('버튼').addEventListener('click', function(){
-        //     if ( document.getElementById('개론').value < 40 || 
-        //         document.getElementById('민법').value < 40 ) {
-        //             alert('불합격');
-        //     } else if (document.getElementById('개론').value + 
-        //         document.getElementById('민법').value >= 120 ) {
-        //             alert('합격');
-        //     } else {
-        //             alert('불합격');
-        //     }
-        // });
+        var count = 0;
+
+        $('.badge').on('click', function(){
+          if (count % 2 == 0) {
+            // document.querySelectorAll('.badge')[0].innerHTML = 'Light 🔄';
+            console.log(count +'는 짝수');
+          } else {
+            console.log(count +'는 홀수');
+          }
+          // else {
+          //   document.querySelectorAll('.badge')[0].innerHTML = 'Dark 🔄';
+          // }
+        })
+
+        
 
     </script>
     
