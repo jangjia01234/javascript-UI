@@ -114,18 +114,35 @@
         var count = 0;
 
         $('.badge').on('click', function(){
-          if (count % 2 == 0) {
-            // document.querySelectorAll('.badge')[0].innerHTML = 'Light 🔄';
-            console.log(count +'는 짝수');
+          count++;
+          if(count%2 == 1) {
+            $('.badge').html('Light 🔄');
+            // document.querySelectorAll('.badge')[0].innerHTML = "Light 🔄";
           } else {
-            console.log(count +'는 홀수');
+           $('.badge').html('Dark 🔄');
           }
-          // else {
-          //   document.querySelectorAll('.badge')[0].innerHTML = 'Dark 🔄';
-          // }
-        })
+        });
 
-        
+        // var count = 0;
+
+        // $('.badge').on('click', function(){
+        //   if (count % 2 == 0) {
+        //     // document.querySelectorAll('.badge')[0].innerHTML = 'Light 🔄';
+        //     console.log(count +'는 짝수');
+        //   } else {
+        //     console.log(count +'는 홀수');
+        //   }
+        //   // else {
+        //   //   document.querySelectorAll('.badge')[0].innerHTML = 'Dark 🔄';
+        //   // }
+        // })
+
+        // Q1. 변수를 만들어보자
+        // 내 나이와 출신 지역을 js 변수에 저장해보자
+        // 나이는 늘 변하니 재할당이 가능한 변수에, 출신 지역은 바뀌지 않으니 불가능한 변수에 저장
+
+        // let age = 24;
+        // const place = seoul;
 
     </script>
     
