@@ -1,69 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>javascript practice</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./main.css">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./main.css" />
+  </head>
 
-<body>
+  <body>
     <!-- navbar -->
     <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-          <span class="navbar-brand">Pass Board</span>
-          <span class="badge bg- ms-auto">Dark 🔄</span>
-          <button class="navbar-toggler" type="button">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </nav> 
+      <div class="container-fluid">
+        <span class="navbar-brand">Pass Board</span>
+        <span class="badge bg- ms-auto">Dark 🔄</span>
+        <button class="navbar-toggler" type="button">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
 
-    <!-- submenu --> 
+    <!-- submenu -->
     <ul class="list-group">
-        <li class="list-group-item">Home</li>
-        <li class="list-group-item">Category</li>
-        <li class="list-group-item">Review</li>
-        <li class="list-group-item">News</li>
-        <li class="list-group-item">Search</li>
-        <li class="list-group-item">Mypage</li>
-    </ul> 
+      <li class="list-group-item">Home</li>
+      <li class="list-group-item">Category</li>
+      <li class="list-group-item">Review</li>
+      <li class="list-group-item">News</li>
+      <li class="list-group-item">Search</li>
+      <li class="list-group-item">Mypage</li>
+    </ul>
 
     <!-- Modal -->
     <div class="black-bg">
-        <div class="white-bg">
-          <h4>Sign in</h4>
-          <form action="./success.html">
-            <div class="my-3">
-              <span>ID</span>
-              <input type="text" class="form-control" id="login-email">
-             </div>
-             <div class="my-3">
-               <span>Password</span>
-               <input type="password" class="form-control" id="login-password">
-             </div>
-             <button type="submit" class="btn btn-primary">Submit</button>
-             <button type="button" class="btn btn-danger" id="close">Close</button>
-          </form>
-        </div>
-      </div> 
-      <h3 class="welcome-text">Welcome to Pass Board</h3>
+      <div class="white-bg">
+        <h4>Sign in</h4>
+        <form action="./success.html">
+          <div class="my-3">
+            <span>ID</span>
+            <input type="text" class="form-control" id="login-email" />
+          </div>
+          <div class="my-3">
+            <span>Password</span>
+            <input type="password" class="form-control" id="login-password" />
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="button" class="btn btn-danger" id="close">Close</button>
+        </form>
+      </div>
+    </div>
+    <h3 class="welcome-text">Welcome to Pass Board</h3>
     <button class="login-btn">Get Started</button>
-    
+
     <!-- main -->
     <main>
-        <h4>Trending Games
-            <img src="#">
-            <img src="#">
-            <img src="#">
-        </h2>
-        <h4>Rank
-            <img src="#">
-            <img src="#">
-            <img src="#">
-        </h2>   
+      <h4>
+        Trending Games
+        <img src="#" />
+        <img src="#" />
+        <img src="#" />
+      </h4>
+      <h4>
+        Rank
+        <img src="#" />
+        <img src="#" />
+        <img src="#" />
+      </h4>
     </main>
 
     <!-- <input type="number" id="개론" placeholder="개론">
@@ -79,76 +84,89 @@
     </script> -->
 
     <!-- jQuery-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
     <script>
-        $('.navbar-toggler').on('click', function(){
-                $('.list-group').toggleClass('show');
-        });  
-        $('.login-btn').on('click', function(){
-                $('.black-bg').toggleClass('show');
-        });
-        $('.btn-danger').on('click', function(){
-                $('.black-bg').css('display', 'none');
-        });
+      $('.navbar-toggler').on('click', function () {
+        $('.list-group').toggleClass('show');
+      });
+      $('.login-btn').on('click', function () {
+        $('.black-bg').toggleClass('show');
+      });
+      $('.btn-danger').on('click', function () {
+        $('.black-bg').css('display', 'none');
+      });
 
-        // 전송 버튼 클릭시 아이디랑 패스워드 공백검사, 비번 6자 미만이면 알림 띄우기
-        document.getElementsByClassName('btn-primary')[0].addEventListener('click', function(e){
-            if ( document.getElementById('login-email').value == '') {
-                e.preventDefault();
-                alert ('Please write ID');
-            } else if ( document.getElementById('login-password').value == '') {
-                e.preventDefault();
-                alert ('Please write PW');
-            } 
-            if ( document.getElementById('login-password').value.length < 6 ) {
-                e.preventDefault();
-                alert ('The PW has to be minimum 6 letters');
-            }
-        });
+      // 전송 버튼 클릭시 아이디랑 패스워드 공백검사, 비번 6자 미만이면 알림 띄우기
+      document.getElementsByClassName('btn-primary')[0].addEventListener('click', function (e) {
+        if (document.getElementById('login-email').value == '') {
+          e.preventDefault();
+          alert('Please write ID');
+        } else if (document.getElementById('login-password').value == '') {
+          e.preventDefault();
+          alert('Please write PW');
+        }
+        if (document.getElementById('login-password').value.length < 6) {
+          e.preventDefault();
+          alert('The PW has to be minimum 6 letters');
+        }
+      });
 
-        // dark / light mode button
-        // badge 클릭 횟수가 홀수면 내부 글자를 Light로 변경
-        // badge 클릭 횟수가 짝수면 내부 글자를 Dark로 변경
+      // dark / light mode button
+      // badge 클릭 횟수가 홀수면 내부 글자를 Light로 변경
+      // badge 클릭 횟수가 짝수면 내부 글자를 Dark로 변경
 
-        var count = 0;
+      var count = 0;
 
-        $('.badge').on('click', function(){
-          count++;
-          if(count%2 == 1) {
-            $('.badge').html('Light 🔄');
-            // document.querySelectorAll('.badge')[0].innerHTML = "Light 🔄";
-          } else {
-           $('.badge').html('Dark 🔄');
-          }
-        });
+      $('.badge').on('click', function () {
+        count++;
+        if (count % 2 == 1) {
+          $('.badge').html('Light 🔄');
+          // document.querySelectorAll('.badge')[0].innerHTML = "Light 🔄";
+        } else {
+          $('.badge').html('Dark 🔄');
+        }
+      });
 
-        // var count = 0;
+      // var count = 0;
 
-        // $('.badge').on('click', function(){
-        //   if (count % 2 == 0) {
-        //     // document.querySelectorAll('.badge')[0].innerHTML = 'Light 🔄';
-        //     console.log(count +'는 짝수');
-        //   } else {
-        //     console.log(count +'는 홀수');
-        //   }
-        //   // else {
-        //   //   document.querySelectorAll('.badge')[0].innerHTML = 'Dark 🔄';
-        //   // }
-        // })
+      // $('.badge').on('click', function(){
+      //   if (count % 2 == 0) {
+      //     // document.querySelectorAll('.badge')[0].innerHTML = 'Light 🔄';
+      //     console.log(count +'는 짝수');
+      //   } else {
+      //     console.log(count +'는 홀수');
+      //   }
+      //   // else {
+      //   //   document.querySelectorAll('.badge')[0].innerHTML = 'Dark 🔄';
+      //   // }
+      // })
 
-        // Q1. 변수를 만들어보자
-        // 내 나이와 출신 지역을 js 변수에 저장해보자
-        // 나이는 늘 변하니 재할당이 가능한 변수에, 출신 지역은 바뀌지 않으니 불가능한 변수에 저장
+      // Q1. 변수를 만들어보자
+      // 내 나이와 출신 지역을 js 변수에 저장해보자
+      // 나이는 늘 변하니 재할당이 가능한 변수에, 출신 지역은 바뀌지 않으니 불가능한 변수에 저장
 
-        // let age = 24;
-        // const place = seoul;
-
+      // let age = 24;
+      // const place = seoul;
     </script>
-    
+
+    <!-- jquery ajax -->
+    <script>
+      $.ajax({
+        method: 'POST',
+        url: 'some.php',
+        data: { name: 'John', location: 'Boston' },
+      }).done(function (msg) {
+        alert('Data Saved: ' + msg);
+      });
+    </script>
+
     <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
-
+  </body>
 </html>
