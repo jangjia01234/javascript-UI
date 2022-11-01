@@ -69,6 +69,7 @@
         <img src="#" />
         <img src="#" />
       </h4>
+      <p></p>
     </main>
 
     <!-- <input type="number" id="개론" placeholder="개론">
@@ -156,15 +157,19 @@
     </script>
 
     <!-- jquery ajax -->
-    <script>
+    <!-- <script>
       $.ajax({
-        method: 'POST',
-        url: 'some.php',
-        data: { name: 'John', location: 'Boston' },
+        method: 'GET',
+        url: 'https://dapi.kakao.com/v3/search/book?target=title',
+        data: { query: '미움받을 용기' },
+        headers: { Authorization: 'KakaoAK 46c3b14609359993d987ccd889013d9f' },
       }).done(function (msg) {
-        alert('Data Saved: ' + msg);
+        console.log(msg.documents[0].title);
+        console.log(msg.documents[0].thumbnail);
+        $('p').append('<strong>' + msg.documents[0].title + '</strong>');
+        $('p').append('<img src = ' + msg.documents[0].thumbnail + ' />');
       });
-    </script>
+    </script> -->
 
     <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
