@@ -55,6 +55,9 @@
     <h3 class="welcome-text">Welcome to Pass Board</h3>
     <button class="login-btn">Get Started</button>
 
+    <br></br>
+    <div class="alert alert-danger">5초 이내 구매시 사은품 증정</div>
+
     <!-- main -->
     <main>
       <h4>
@@ -76,7 +79,27 @@
     <input type="number" id="민법" placeholder="민법">
     <button type="submit" id="버튼">View</button> -->
 
+
+
+<!-- 1초마다 뭔가를 실행하고 싶으면 setInterval 사용 
+ if var function 은 자바스크립트 문법, 
+document.querySelector(), setTimeout(), alert() 이런건 브라우저 사용법(== Web browser API) 
+ 브라우저 사용법을 잘 활용해야 할 수 있는 게 많다 -->
+
     <!-- javascript -->
+
+    <script>
+
+      setTimeout(function(){ $('.alert').hide() }, 1000)
+
+      setTimeout(함수, 1000);
+
+      function 함수() {
+        console.log('hello')
+      }
+
+    </script>
+
     <!-- <script>
         document.querySelectorAll('.navbar-toggler')[0].addEventListener('click', 
             function(){
@@ -157,7 +180,7 @@
     </script>
 
     <!-- jquery ajax -->
-    <!-- <script>
+    <script>
       $.ajax({
         method: 'GET',
         url: 'https://dapi.kakao.com/v3/search/book?target=title',
@@ -169,7 +192,7 @@
         $('p').append('<strong>' + msg.documents[0].title + '</strong>');
         $('p').append('<img src = ' + msg.documents[0].thumbnail + ' />');
       });
-    </script> -->
+    </script>
 
     <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
