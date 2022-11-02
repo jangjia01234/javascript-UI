@@ -56,7 +56,9 @@
     <button class="login-btn">Get Started</button>
 
     <br></br>
-    <div class="alert alert-danger">5초 이내 구매시 사은품 증정</div>
+    <div class="alert alert-danger">
+      <span class="timer">5</span>
+      초 이내 구매시 사은품 증정</div>
 
     <!-- main -->
     <main>
@@ -91,13 +93,33 @@
 
     <script>
 
-      setTimeout(function(){ $('.alert').hide() }, 1000)
+      let time = 5;
 
-      setTimeout(함수, 1000);
+      setInterval(function() {
 
-      function 함수() {
-        console.log('hello')
-      }
+        time -= 1;
+
+        if ( time > 0 ) {
+          $('.timer').text(time);
+        } 
+        else if ( time == 0 ) {
+          $('.alert').hide();
+        }
+
+      }, 1000);
+
+      // function 타이머() {
+
+      //   time = time - 1;
+
+      //   if (time < 5) {
+      //     $('.timer').text(time);
+      //   }
+      //   if (time === 0) {
+      //     $('.alert').hide();
+      //   }
+
+      // }
 
     </script>
 
